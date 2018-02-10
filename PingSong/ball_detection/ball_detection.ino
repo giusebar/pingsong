@@ -1,6 +1,6 @@
 // these constants won't change:
 const int ledPin = 13;      // LED connected to digital pin 13
-const int knockSensor = A0; // the piezo is connected to analog pin 0
+const int vibrationSensor = A0; // the piezo is connected to analog pin 0
 const int threshold = 350;  // threshold value to decide when the detected sound is a knock or not
 
 
@@ -15,7 +15,7 @@ void setup() {
 
 void loop() {
   // read the sensor and store it in the variable sensorReading:
-  sensorReading = analogRead(knockSensor);
+  sensorReading = analogRead(vibrationSensor);
   Serial.println(sensorReading);
   // if the sensor reading is greater than the threshold:
   if (sensorReading >= threshold) {
